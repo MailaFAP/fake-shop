@@ -4,7 +4,7 @@ COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 WORKDIR /app
 COPY . /app
-RUN chmod +x /app/entrypoint.sh
+RUN chmod +x /app/entrypoint1.sh
 ENV PROMETHEUS_MULTIPROC_DIR=/tmp/metrics
 RUN mkdir -p /tmp/metrics 
-CMD ["/app/entrypoint.sh"]
+CMD ["./entrypoint1.sh"]
